@@ -32,7 +32,7 @@
     <header class="hero">
         <div class="container">
             <h1>Professional Websites<br>That Get Customers</h1>
-            <p>Custom 5-page websites built by experts. No contracts. No monthly fees.</p>
+            <p>Custom 5-page websites built by professionals. No contracts. No monthly fees.</p>
             <div class="price-badge">From $497 <span style="font-size: 0.8em; opacity: 0.9;">ONE-TIME PAYMENT</span>
             </div>
             <a href="mailto:daniel@deskflowmobility.co.za?subject=Website%20Request" class="cta-button">Get My Website
@@ -79,7 +79,7 @@
                     <li>🔒 Free SSL certificate</li>
                     <li>⚡ Lightning-fast loading</li>
                     <li>📱 Mobile-optimized</li>
-                    <li>🔧 SEO-ready</li>
+                    <li>🔧 SEO-basics</li>
                     <li>⏰ Live in 7 days</li>
                     <li>✅ 30-day money-back guarantee</li>
                 </ul>
@@ -136,13 +136,19 @@
         </footer>
     </main>
 
-    <!-- Google Analytics (add your ID later) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <!-- Minimal Google Analytics 4 – loads after everything else -->
     <script>
+    setTimeout(function(){
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+        s.async = true;
+        document.head.appendChild(s);
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
+        gtag('config', 'G-XXXXXXXXXX', { send_page_view: false });
+        gtag('event', 'page_view');
+    }, 3000); // waits 3 seconds – zero impact on LCP
     </script>
 </body>
 
