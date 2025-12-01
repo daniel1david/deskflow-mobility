@@ -22,7 +22,7 @@
         
         header {
             background: linear-gradient(135deg, #55a8f5 0%, #1e7bc3 100%),
-                        url('assets/banner.png');
+                        url('assets/banner.webp');
             background-blend-mode: multiply; /* darkens the image beautifully */
             background-repeat: no-repeat;
             background-size: cover;
