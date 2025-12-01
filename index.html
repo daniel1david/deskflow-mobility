@@ -9,20 +9,22 @@
     <title>DeskFlow Mobility - Professional Websites | From $497 One-Time</title>
     <meta name="description" content="Custom 5-page websites for small businesses. From $497 one-time payment. Live in 7 days. Free hosting forever.">
 
-    <!-- Preconnect & DNS prefetch -->
+    <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
-    <!-- Critical: Preload hero image + fonts -->
+    <!-- Preload hero image (biggest LCP win) -->
     <link rel="preload" href="assets/banner.webp" as="image">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" as="style">
 
-    <!-- Google Fonts - loaded asynchronously -->
+    <!-- Google Fonts – non-blocking -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" 
           rel="stylesheet" media="print" onload="this.media='all'">
 
     <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+
+    <!-- main CSS -->
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 
 <body>
