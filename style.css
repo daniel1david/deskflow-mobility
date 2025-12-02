@@ -1,200 +1,231 @@
 * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Manrope', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        h1, h2, h3, .section-title, .price-badge, .cta-button, .price-large {
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #55a8f5 0%, #1e7bc3 100%),
-                        url('assets/banner.webp');
-            background-blend-mode: multiply; /* darkens the image beautifully */
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 4rem 0; /* Increased padding for more hero space */
-            text-align: center;
-            position: relative; /* Needed for overlay method */
-            min-height: 70vh; /* Ensures full coverage */
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-        
-        .price-badge {
-            background: #ec6331;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-size: 1.5rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(255, 147, 107, 0.4);
-        }
-        
-        .cta-button {
-            background: #ec6331;
-            color: white;
-            padding: 1.2rem 3rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 147, 107, 0.4);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(255, 147, 107, 0.4);
-        }
-        
-        /* Sections */
-        section {
-            padding: 5rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: #2d3748;
-        }
-        
-        /* Features */
-        .features {
-            background: #f8fafc;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        /* What's Included */
-        .included {
-            background: linear-gradient(135deg, #f5f5f5 0%, #1e7bc3 100%);
-        }
-        
-        .checklist {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-            list-style: none;
-        }
-        
-        .checklist li {
-            padding: 1rem;
-            background: #f0f9ff;
-            border-radius: 12px;
-            border-left: 4px solid #3b82f6;
-            font-weight: 500;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .testimonial {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
-        
-        /* Pricing */
-        .pricing {
-            /* background: #f8fafc; */
-            background: linear-gradient(52deg, #f5f5f5 0%, #1e7bc3 100%);
-        }
-        
-        .pricing-card {
-            background: white;
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-        
-        .price-large {
-            font-size: 4rem;
-            font-weight: 700;
-            color: #ff6b35;
-            margin: 1rem 0;
-        }
-        
-        /* Footer */
-        footer {
-            background: #1a202c;
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
-        }
-        
-        /* Mobile */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .price-badge { font-size: 1.2rem; }
-            .section-title { font-size: 2rem; }
-        }
+/* Fix CLS: Prevent invisible text during font load */
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap') format('woff2');
+    font-display: swap; /* CLS game changer */
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap') format('woff2');
+    font-display: swap; /* CLS game changer */
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+.section-title,
+.price-badge,
+.cta-button,
+.price-large {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #55a8f5 0%, #1e7bc3 100%),
+        url('assets/banner.webp');
+    background-blend-mode: multiply;
+    /* darkens the image beautifully */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 0;
+    /* Increased padding for more hero space */
+    text-align: center;
+    position: relative;
+    /* Needed for overlay method */
+    min-height: 70vh;
+    /* Ensures full coverage */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.price-badge {
+    background: #ec6331;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(255, 147, 107, 0.4);
+}
+
+.cta-button {
+    background: #ec6331;
+    color: white;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 147, 107, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(255, 147, 107, 0.4);
+}
+
+/* Sections */
+section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #2d3748;
+}
+
+/* Features */
+.features {
+    background: #f8fafc;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* What's Included */
+.included {
+    background: linear-gradient(135deg, #f5f5f5 0%, #1e7bc3 100%);
+}
+
+.checklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    list-style: none;
+}
+
+.checklist li {
+    padding: 1rem;
+    background: #f0f9ff;
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+    font-weight: 500;
+}
+
+/* Testimonials */
+.testimonials {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* Pricing */
+.pricing {
+    /* background: #f8fafc; */
+    background: linear-gradient(52deg, #f5f5f5 0%, #1e7bc3 100%);
+}
+
+.pricing-card {
+    background: white;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.price-large {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ff6b35;
+    margin: 1rem 0;
+}
+
+/* Footer */
+footer {
+    background: #1a202c;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .price-badge {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
