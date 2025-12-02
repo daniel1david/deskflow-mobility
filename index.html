@@ -16,6 +16,9 @@
     <!-- Preload hero image (biggest LCP win) -->
     <link rel="preload" href="assets/banner.webp" as="image">
 
+    <!-- High-priority hint for LCP -->
+    <link rel="preload" href="assets/banner.webp" as="image" fetchpriority="high">
+
     <!-- Google Fonts – non-blocking -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" 
           rel="stylesheet" media="print" onload="this.media='all'">
